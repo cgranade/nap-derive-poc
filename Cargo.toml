@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "nap",
+    "nap_derive",
+    "nu_plugin_mtg"
+]
