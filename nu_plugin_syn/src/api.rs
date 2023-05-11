@@ -151,7 +151,6 @@ impl Server {
             .and_then(|e| e.get_password())
             .ok()?);
 
-        eprintln!("session id found: {:?}", session_id);
 
         let mut new = Self {
             name,
@@ -197,9 +196,6 @@ impl Server {
         }
         match self.endpoints.get(endpoint.as_ref()) {
             None => {
-                for ep in &self.endpoints {
-                    eprintln!("Known endpoint {}: {:?}", ep.0, ep.1);
-                }
                 panic!("no such endpoint")
             },
             Some(ApiEndpoint {

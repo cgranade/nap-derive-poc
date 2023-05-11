@@ -12,7 +12,6 @@ use windows::Win32::{
 pub fn reset_stdin() {
     cfg_if::cfg_if! {
         if #[cfg(windows)] {
-            eprintln!("Reattaching to interactive input.");
             // Once we have read the call, we want to detach the redirected stdin stream
             // and reattach to interactive input.
             // See https://stackoverflow.com/q/21779818 for why this works.
