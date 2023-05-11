@@ -2,5 +2,6 @@
 members = [
     "nap",
     "nap_derive",
-    "nu_plugin_mtg"
+    "nu_plugin_mtg",
+    "nu_plugin_syn",
 ]
